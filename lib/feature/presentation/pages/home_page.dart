@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:jova_v2/feature/presentation/getx/jova_getx.dart';
 import '../color/color.dart';
 import '../widgets/homepage_preview.dart';
