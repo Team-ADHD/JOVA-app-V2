@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import '../color/color.dart';
 
 class HomepageText extends StatelessWidget {
@@ -9,40 +8,37 @@ class HomepageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 1,
-      child: Text.rich(
-        TextSpan(
-          children: [
-            TextSpan(
-              text:"$major",
-              style: TextStyle(
-                  fontFamily: 'PretendardVariable',
-                  fontWeight: FontWeight.w800,
-                  decoration: TextDecoration.underline,
-                  decorationColor: AppColors.yellowcolor,
-                  decorationThickness: 4
-              ),
+    return Text.rich(
+      TextSpan(
+        children: [
+          TextSpan(
+            text:"$major",
+            style: TextStyle(
+                fontFamily: 'PretendardVariable',
+                fontWeight: FontWeight.w800,
+                decoration: TextDecoration.underline,
+                decorationColor: AppColors.yellowcolor,
+                decorationThickness: 4
             ),
-            TextSpan(
-              text:"를 찾는 ",
-              style: TextStyle(
-                  fontFamily: 'PretendardVariable',
-                  fontWeight: FontWeight.w800,
-              ),
+          ),
+          TextSpan(
+            text:"를 찾는 ",
+            style: TextStyle(
+                fontFamily: 'PretendardVariable',
+                fontWeight: FontWeight.w800,
             ),
-            TextSpan(
-              text:"구인구직",
-              style: TextStyle(
-                  fontFamily: 'PretendardVariable',
-                  fontWeight: FontWeight.w800,
-                  decoration: TextDecoration.underline,
-                  decorationColor: AppColors.yellowcolor,
-                  decorationThickness: 4
-              ),
+          ),
+          TextSpan(
+            text:"구인구직",
+            style: TextStyle(
+                fontFamily: 'PretendardVariable',
+                fontWeight: FontWeight.w800,
+                decoration: TextDecoration.underline,
+                decorationColor: AppColors.yellowcolor,
+                decorationThickness: 4
             ),
-          ]
-        ),
+          ),
+        ]
       ),
     );
   }
