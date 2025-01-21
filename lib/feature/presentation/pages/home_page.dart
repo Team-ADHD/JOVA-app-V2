@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:jova_v2/feature/presentation/getx/jova_getx.dart';
-
 import '../color/color.dart';
-import '../wiegets/homepage_text.dart';
+import '../widgets/homepage_preview.dart';
+import '../widgets/homepage_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
+                    /*Expanded(
                       flex: 1,
                       child: Obx((){
                         return DropdownButton(
@@ -95,12 +95,17 @@ class HomePage extends StatelessWidget {
                           }).toList(),
                         );
                       }),
-                    )
+                    )*/
                   ],
                 ),
               ),
               SizedBox(height: 20,),
-
+              IndexedStack(
+                index: controller.writeindex,
+                children: [
+                  HomepagePreview(title: "조오바", content: "ㅋㅋ"),
+                ],
+              )
             ],
           ),
         ),
@@ -115,11 +120,11 @@ class HomePage extends StatelessWidget {
             ),
           ),
           child: BottomNavigationBar(
-            onTap: controller.changeindex,
+            onTap: controller.change_bottomnavigationbarindex,
             backgroundColor: Colors.white,
             elevation: bottomNavigationBarHeight,
             type: BottomNavigationBarType.fixed,
-            currentIndex: controller.selectindex.value,
+            currentIndex: controller.bottomnavigationbarindex.value,
             unselectedItemColor: Colors.black,
             selectedItemColor: Colors.yellow,
             items: [
